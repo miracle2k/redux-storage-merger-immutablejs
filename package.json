@@ -1,0 +1,47 @@
+{
+  "name": "redux-storage-merger-immutablejs",
+  "version": "1.0.0",
+  "description": "ImmutableJS compatible merger for redux-storage",
+  "main": "build/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "test": "make lint test build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelcontento/redux-storage-merger-immutablejs.git"
+  },
+  "homepage": "https://github.com/michaelcontento/redux-storage-merger-immutablejs",
+  "keywords": [
+    "redux",
+    "redux-storage",
+    "redux-storage-merger"
+  ],
+  "author": "Michael Contento <michaelcontento@gmail.com>",
+  "files": [
+    "build/",
+    "src",
+    "!**/__tests__/**"
+  ],
+  "eslintConfig": {
+    "extends": "michaelcontento"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-preset-michaelcontento": "^1.3.0",
+    "eslint": "^1.10.3",
+    "eslint-config-michaelcontento": "^1.1.1",
+    "eslint-plugin-mocha-only": "0.0.3",
+    "mocca": "^0.3.0",
+    "release-it": "^2.3.1"
+  },
+  "dependencies": {
+    "immutable": "^3.7.6",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isfunction": "^3.0.8",
+    "lodash.isobject": "^3.0.2",
+    "lodash.merge": "^4.3.1"
+  }
+}
