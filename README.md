@@ -14,6 +14,15 @@ Merger for [redux-storage][] that know how to deal with [ImmutableJS][] objects.
 
     npm install --save redux-storage-merger-immutablejs
 
+## Usage
+
+Custom mergers, like this one, can simply be passed as second argument to [redux-storage][]s `reducer`:
+
+```js
+import merger from 'reduc-storage-merger-immmutablejs';
+const reducer = storage.reducer(reducer, merger);
+```
+
 ## License
 
     The MIT License (MIT)
