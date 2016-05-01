@@ -5,6 +5,11 @@ import merge from 'lodash.merge';
 import { fromJS } from 'immutable';
 
 export default (oldState, newState) => {
+    // Old state is null/undefined? Just assign
+    if (oldState === null || oldState === undefined) {
+        return newState;
+    }
+
     // Whole state is ImmutableJS? Easiest way to merge
     if (isFunction(oldState.mergeDeep)) {
         return oldState.mergeDeep(newState);
