@@ -43,7 +43,11 @@ export default (oldState, newState) => {
         if (!!oldValue && isFunction(oldValue.mergeDeep)) {
             result[key] = oldValue.mergeDeep(value);
         } else if (!!value && isFunction(value.mergeDeep)) {
-            result[key] = fromJS(oldValue).mergeDeep(value);
+            if (!oldValue) {
+                result[key] = value;
+            } else {
+                result[key] = fromJS(oldValue).mergeDeep(value);
+            }
         } else if (isObject(value) && !isArray(value)) {
             result[key] = merge({}, oldValue, value);
         } else {

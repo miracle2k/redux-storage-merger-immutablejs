@@ -87,10 +87,10 @@ describe('merger', () => {
 
         it('should properly merge if old state values with null or undefined', () => {
             const oldState = { x: null, y: void(0) };
-            const newState = { x: 1337, y: 1338 };
+            const newState = map({ x: 1337, y: 1338 });
 
             merger(oldState, newState)
-                .should.deep.equal({ x: 1337, y: 1338 });
+                .should.deep.equal(map({ x: 1337, y: 1338 }));
         });
     });
 });
